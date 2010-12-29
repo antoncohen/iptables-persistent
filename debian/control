@@ -1,7 +1,7 @@
 Source: iptables-persistent
 Section: admin
 Priority: optional
-Maintainer: Chris Silva <racerx@makeworld.com>
+Maintainer: Jonathan Wiltshire <jmw@debian.org>
 Build-Depends: debhelper (>= 7.0.50~)
 Standards-Version: 3.9.1
 
