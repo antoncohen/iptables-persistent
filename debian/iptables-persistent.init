@@ -1,27 +1,51 @@
 #!/bin/sh
 #		Written by Simon Richter <sjr@debian.org>
+#		modified by Jonathan Wiltshire <jmw@debian.org>
+#		with help from Christoph Anton Mitterer
 #
+
 ### BEGIN INIT INFO
 # Provides:          iptables-persistent
 # Required-Start:    mountkernfs $local_fs
 # Required-Stop:     $local_fs
 # Default-Start:     S
 # Default-Stop:      
+# X-Start-Before:    $network
+# X-Stop-After:      $network
 # Short-Description: Set up iptables rules
 ### END INIT INFO
 
+retval = 0
+
+load_rules()
+{
+	#load IPv4 rules
+	if [ -f /etc/iptables/rules ]; then
+		iptables-restore < /etc/iptables/rules
+		if [ $? -ne 0 ]; then
+			${retval}=1
+		fi
+	fi
+
+	#load IPv6 rules	
+	if [ -f /etc/iptables/rules.v6 ]; then
+		ip6tables-restore < /etc/iptables/rules.v6
+		if [ $? -ne 0 ]; then
+			${retval}=1
+		fi
+	fi
+}
+
 case "$1" in
-start)
-    if [ -f /etc/iptables/rules ]; then
-        iptables-restore </etc/iptables/rules
-    fi
-    ;;
-stop|force-stop|restart|force-reload|status)
-    ;;
+start|restart|reload|force-reload)
+	load_rules
+	;;
+stop)
+	;;
 *)
-    echo "Usage: $0 {start|stop|force-stop|restart|force-reload|status}" >&2
+    echo "Usage: $0 {start|restart|reload|force-reload}" >&2
     exit 1
     ;;
 esac
 
-exit 0
+exit "${rc}"
