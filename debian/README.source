@@ -1,0 +1,8 @@
+
+  iptables-persistent has become a native package (meaning there is no
+  upstream tarball). In its present form, iptables-persistent is unlikely
+  to be useful outside Debian or Debian-derivatives, and I do not plan to
+  include any support for other distributions, so a native package makes the
+  maintenance overhead considerably smaller.
+
+ -- Jonathan Wiltshire <jmw@debian.org>  Wed, 29 Dec 2010 22:51:17 +0000
