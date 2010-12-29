@@ -8,7 +8,7 @@ Standards-Version: 3.9.1
 Package: iptables-persistent
 Architecture: all
 Depends: ${misc:Depends}, iptables
-Description: Simple package to set up iptables on boot
+Description: simple package to set up iptables on boot
  This package contains just a system startup script that restores iptables
  rules from a configuration file.
  .
