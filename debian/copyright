@@ -1,11 +1,11 @@
 Format-Specification: http://svn.debian.org/wsvn/dep/web/deps/dep5.mdwn?op=file&rev=135
 Name: iptables-persistent
-Maintainer: Chris Silva <racerx@makeworld.com>
-Source: 
-Upsteam author: Simon Richter <sjr@debian.org>
+Maintainer: Jonathan Wiltshire <jmw@debian.org>
 
 Files: *
 Copyright: © 2009, Simon Richter <sjr@debian.org>
+           © 2010, Chris Silva <racerx@makeworld.com>
+           © 2010, Jonathan Wiltshire <jmw@debian.org>
 License: GPL-3
  This program is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
@@ -23,7 +23,3 @@ License: GPL-3
  On Debian systems, the complete text of the GNU General
  Public License version 3 can be found in `/usr/share/common-licenses/GPL-3'.
 
-Files: debian/*
-Copyright: © 2009, Simon Richter <sjr@debian.org>,
-           © 2010, Chris Silva <racerx@makeworld.com>
-License: GPL-3
