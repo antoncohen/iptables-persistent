@@ -4,6 +4,13 @@ The Debian Package iptables-persistent
 This is a very simple script that restores the file /etc/iptables/rules as
 the active ruleset at system boot.
 
-To save the current ruleset, use "iptables-save >/etc/iptables/rules".
+If it exists, IPv6 rules are also restored from /etc/iptables/rules.v6
+
+Loading of rules is guaranteed to happen before network interfaces are
+brought up.
+
+To save the current ruleset, use "iptables-save >/etc/iptables/rules"
+or "ip6tables-save >/etc/iptables/rules.v6"
 
  -- Simon Richter <sjr@debian.org>  Wed, 01 Jul 2009 13:43:43 +0200
+ -- Jonathan Wiltshire <jmw@debian.org>  Thu, 30 Dec 2010 00:00:00 +0000
