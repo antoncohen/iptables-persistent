@@ -1,0 +1,16 @@
+Source: iptables-persistent
+Section: admin
+Priority: optional
+Maintainer: Chris Silva <racerx@makeworld.com>
+Build-Depends: debhelper (>= 7.0.50~)
+Standards-Version: 3.9.1
+
+Package: iptables-persistent
+Architecture: all
+Depends: ${misc:Depends}, iptables
+Description: Simple package to set up iptables on boot
+ This package contains just a system startup script that restores iptables
+ rules from a configuration file.
+ .
+ Since this is aimed at experienced admins, there is no configuration
+ wizard.

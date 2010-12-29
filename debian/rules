@@ -1,0 +1,48 @@
+#!/usr/bin/make -f
+
+build-indep:
+build-arch:
+build:
+
+clean: 
+	dh_testdir
+	dh_testroot
+	dh_clean 
+
+binary-indep:
+	dh_testdir
+	dh_testroot
+	dh_prep  
+	mkdir -p debian/iptables-persistent/etc/iptables
+	touch debian/iptables-persistent/etc/iptables/rules
+	dh_installchangelogs 
+	dh_installdocs
+	dh_installexamples
+#	dh_install
+#	dh_installmenu
+#	dh_installdebconf
+#	dh_installlogrotate
+#	dh_installemacsen
+#	dh_installpam
+#	dh_installmime
+#	dh_python
+	dh_installinit -- start 37 S .
+#	dh_installcron
+#	dh_installinfo
+#	dh_installman
+#	dh_link
+#	dh_strip
+	dh_compress
+	dh_fixperms
+#	dh_perl
+#	dh_makeshlibs
+	dh_installdeb
+	dh_shlibdeps
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary-arch:
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary install configure

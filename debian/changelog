@@ -1,0 +1,16 @@
+iptables-persistent (0.0.20100801) unstable; urgency=low
+
+  * New Maintainer (Closes: #591077)
+  * Updated Standards-Version to 3.9.1
+  * debian/copyright:
+    + Make copyright file DEP5 compliant
+  * deian/init.d
+    + Renamed to iptables-persistent.init
+
+ -- Chris Silva <racerx@makeworld.com>  Sun, 01 Aug 2010 21:34:25 -0500
+
+iptables-persistent (0.0.20090701) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Simon Richter <sjr@debian.org>  Wed, 01 Jul 2009 13:43:43 +0200
