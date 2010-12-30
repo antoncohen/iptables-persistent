@@ -1,3 +1,24 @@
+iptables-persistent (0.0.20101230) unstable; urgency=low
+
+  * [b53635] New maintainer (Closes: #599478)
+  * [7cc2c8] Convert to a native package, rationale in README.source
+  * [874b93] debian/control: make short description policy-compliant
+  * [193b89] debian/rules: convert to tiny-style dh rules
+  * [3ce686] Improvements to iptables-persistent.init:
+      - load IPv6 rules if available
+      - guarantee start before network interfaces
+      - implement reload, force-reload and restart
+      - return the exit status of iptables-restore to catch
+        rule file errors
+    (Closes: #599478, #541459) - thanks to Christoph Anton Mitterer
+  * [00a4b3] Add debian/gbp.conf with appropriate options
+  * [07781c] Remove debian/watch
+  * [244039] Update debian/README
+  * [69443b] Update debian/copyright
+  * [42dc6f] Add Vcs-* fields to debian/control
+
+ -- Jonathan Wiltshire <jmw@debian.org>  Thu, 30 Dec 2010 01:22:41 +0000
+
 iptables-persistent (0.0.20100801) unstable; urgency=low
 
   * New Maintainer (Closes: #591077)
