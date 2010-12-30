@@ -15,7 +15,7 @@
 # Short-Description: Set up iptables rules
 ### END INIT INFO
 
-retval = 0
+rc=0
 
 load_rules()
 {
@@ -23,7 +23,7 @@ load_rules()
 	if [ -f /etc/iptables/rules ]; then
 		iptables-restore < /etc/iptables/rules
 		if [ $? -ne 0 ]; then
-			${retval}=1
+			rc=1
 		fi
 	fi
 
@@ -31,7 +31,7 @@ load_rules()
 	if [ -f /etc/iptables/rules.v6 ]; then
 		ip6tables-restore < /etc/iptables/rules.v6
 		if [ $? -ne 0 ]; then
-			${retval}=1
+			rc=1
 		fi
 	fi
 }
@@ -48,4 +48,4 @@ stop)
     ;;
 esac
 
-exit "${rc}"
+exit $rc
