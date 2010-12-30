@@ -20,8 +20,8 @@ rc=0
 load_rules()
 {
 	#load IPv4 rules
-	if [ -f /etc/iptables/rules ]; then
-		iptables-restore < /etc/iptables/rules
+	if [ -f /etc/iptables/rules.v4 ]; then
+		iptables-restore < /etc/iptables/rules.v4
 		if [ $? -ne 0 ]; then
 			rc=1
 		fi

@@ -1,0 +1,10 @@
+#!/bin/sh
+
+set -e
+
+if dpkg-maintscript-helper supports mv_conffile 2>/dev/null; then
+    dpkg-maintscript-helper mv_conffile \
+         /etc/iptables/rules /etc/iptables/rules.v4 0.0.20101230 -- "$@"
+fi
+
+#DEBHELPER#
