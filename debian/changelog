@@ -1,3 +1,20 @@
+iptables-persistent (0.5) unstable; urgency=low
+
+  * [e1e1a6] debian/rules: fix regression installing init script for
+    systems that have not been converted to dependency-based start
+    (Closes: #608383)
+  * [ac615c] Load rules from /etc/iptables/rules.v4 instead of
+    /etc/iptables/rules for consistency, and rename the rules file
+    appropriately to keep local modifications. (Closes: #608382)
+  * [9c0df7] During installation, prompt the user to save the current
+    rulesets
+  * [a48ed9] iptables-persistent.init: show useful progress messages
+    using LSB functions, and implement a "save" action for the lazy^w
+    efficient admin
+  * [6db04e] Update README
+
+ -- Jonathan Wiltshire <jmw@debian.org>  Fri, 31 Dec 2010 00:32:00 +0000
+
 iptables-persistent (0.0.20101230) unstable; urgency=low
 
   * [b53635] New maintainer (Closes: #599478)
