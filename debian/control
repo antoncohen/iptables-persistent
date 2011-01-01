@@ -9,7 +9,7 @@ Vcs-Git: git://robin.powdarrmonkey.net/git/iptables-persistent/
 
 Package: iptables-persistent
 Architecture: all
-Depends: ${misc:Depends}, iptables
+Depends: iptables, lsb-base, ${misc:Depends}
 Description: simple package to set up iptables on boot
  This package contains just a system startup script that restores iptables
  rules from a configuration file.
