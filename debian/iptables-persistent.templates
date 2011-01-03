@@ -6,7 +6,7 @@ _Description: Save current IPv4 rules?
  file /etc/iptables/rules.v4. These rules will then be loaded next time
  the machine is started.
  .
- Rules are only saved automatically during installation or upgrade. See the
+ Rules are only saved automatically during package installation. See the
  manual page of iptables-save(8) for instructions on keeping the rules file
  up-to-date.
 
@@ -18,6 +18,6 @@ _Description: Save current IPv6 rules?
  file /etc/iptables/rules.v6. These rules will then be loaded next time
  the machine is started.
  .
- Rules are only saved automatically during installation or upgrade. See the
+ Rules are only saved automatically during package installation. See the
  manual page of ip6tables-save(8) for instructions on keeping the rules file
  up-to-date.
