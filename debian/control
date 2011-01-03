@@ -11,8 +11,8 @@ Package: iptables-persistent
 Architecture: all
 Depends: iptables, lsb-base, ${misc:Depends}
 Description: simple package to set up iptables on boot
- This package contains just a system startup script that restores iptables
+ This package just contains a system startup script that restores iptables
  rules from a configuration file.
  .
- Since this is aimed at experienced admins, there is no configuration
+ Since this is aimed at experienced adminstrators, there is no configuration
  wizard.
