@@ -1,10 +1,19 @@
+# These templates have been reviewed by the debian-l10n-english
+# team
+#
+# If modifications/additions/rewording are needed, please ask
+# debian-l10n-english@lists.debian.org for advice.
+#
+# Even minor modifications require translation updates and such
+# changes should be coordinated with translators and reviewers.
+
 Template: iptables-persistent/autosave_v4
 Type: boolean
-Default: false
+Default: true
 _Description: Save current IPv4 rules?
- The installer can save your current iptables rules to the configuration
- file /etc/iptables/rules.v4. These rules will then be loaded next time
- the machine is started.
+ Current iptables rules can be saved to the configuration
+ file /etc/iptables/rules.v4. These rules will then be loaded automatically
+ during system startup.
  .
  Rules are only saved automatically during package installation. See the
  manual page of iptables-save(8) for instructions on keeping the rules file
@@ -12,11 +21,11 @@ _Description: Save current IPv4 rules?
 
 Template: iptables-persistent/autosave_v6
 Type: boolean
-Default: false
+Default: true
 _Description: Save current IPv6 rules?
- The installer can save your current iptables rules to the configuration
- file /etc/iptables/rules.v6. These rules will then be loaded next time
- the machine is started.
+ Current iptables rules can be saved to the configuration
+ file /etc/iptables/rules.v6. These rules will then be loaded automatically
+ during system startup.
  .
  Rules are only saved automatically during package installation. See the
  manual page of ip6tables-save(8) for instructions on keeping the rules file

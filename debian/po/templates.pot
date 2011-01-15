@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: iptables-persistent@packages.debian.org\n"
-"POT-Creation-Date: 2010-12-30 21:33+0000\n"
+"POT-Creation-Date: 2011-01-15 20:39+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,48 +19,48 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../iptables-persistent.templates:1001
+#: ../iptables-persistent.templates:2001
 msgid "Save current IPv4 rules?"
 msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../iptables-persistent.templates:1001
+#: ../iptables-persistent.templates:2001
 msgid ""
-"The installer can save your current iptables rules to the configuration "
-"file /etc/iptables/rules.v4. These rules will then be loaded next time the "
-"machine is started."
+"Current iptables rules can be saved to the configuration file /etc/iptables/"
+"rules.v4. These rules will then be loaded automatically during system "
+"startup."
 msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../iptables-persistent.templates:1001
+#: ../iptables-persistent.templates:2001
 msgid ""
-"Rules are only saved automatically during installation or upgrade. See the "
+"Rules are only saved automatically during package installation. See the "
 "manual page of iptables-save(8) for instructions on keeping the rules file "
 "up-to-date."
 msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../iptables-persistent.templates:2001
+#: ../iptables-persistent.templates:3001
 msgid "Save current IPv6 rules?"
 msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../iptables-persistent.templates:2001
+#: ../iptables-persistent.templates:3001
 msgid ""
-"The installer can save your current iptables rules to the configuration "
-"file /etc/iptables/rules.v6. These rules will then be loaded next time the "
-"machine is started."
+"Current iptables rules can be saved to the configuration file /etc/iptables/"
+"rules.v6. These rules will then be loaded automatically during system "
+"startup."
 msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../iptables-persistent.templates:2001
+#: ../iptables-persistent.templates:3001
 msgid ""
-"Rules are only saved automatically during installation or upgrade. See the "
+"Rules are only saved automatically during package installation. See the "
 "manual page of ip6tables-save(8) for instructions on keeping the rules file "
 "up-to-date."
 msgstr ""
