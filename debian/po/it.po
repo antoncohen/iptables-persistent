@@ -1,0 +1,78 @@
+# ITALIAN TRANSLATION OF IPTABLES-PERSISTENT'S PO-DEBCONF FILE.
+# COPYRIGHT (C) 2011 THE IPTABLES-PERSISTENT'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the iptables-persistent package.
+# Vincenzo Campanella <vinz65@gmail.com>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: iptables-persistent 0.6\n"
+"Report-Msgid-Bugs-To: iptables-persistent@packages.debian.org\n"
+"POT-Creation-Date: 2011-01-15 20:39+0000\n"
+"PO-Revision-Date: 2011-01-16 08:31+0100\n"
+"Last-Translator: Vincenzo Campanella <vinz65@gmail.com>\n"
+"Language-Team: Italian <tp@lists.linux.it>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: boolean
+#. Description
+#: ../iptables-persistent.templates:2001
+msgid "Save current IPv4 rules?"
+msgstr "Salvare le regole IPv4 attuali?"
+
+#. Type: boolean
+#. Description
+#: ../iptables-persistent.templates:2001
+msgid ""
+"Current iptables rules can be saved to the configuration file /etc/iptables/"
+"rules.v4. These rules will then be loaded automatically during system "
+"startup."
+msgstr ""
+"Le regole iptables attuali possono essere salvate nel file di configurazione "
+"«/etc/iptables/rules.v4». Queste regole verranno poi caricate automaticamente "
+"all'avvio del sistema."
+
+#. Type: boolean
+#. Description
+#: ../iptables-persistent.templates:2001
+msgid ""
+"Rules are only saved automatically during package installation. See the "
+"manual page of iptables-save(8) for instructions on keeping the rules file "
+"up-to-date."
+msgstr ""
+"Le regole vengono salvate automaticamente solo durante l'installazione del "
+"pacchetto. Per informazioni su come mantenere aggiornato il file delle regole "
+"vedere le pagine del manuale di iptables-save(8)."
+
+#. Type: boolean
+#. Description
+#: ../iptables-persistent.templates:3001
+msgid "Save current IPv6 rules?"
+msgstr "Salvare le regole IPv6 attuali?"
+
+#. Type: boolean
+#. Description
+#: ../iptables-persistent.templates:3001
+msgid ""
+"Current iptables rules can be saved to the configuration file /etc/iptables/"
+"rules.v6. These rules will then be loaded automatically during system "
+"startup."
+msgstr ""
+"Le regole iptables attuali possono essere salvate nel file di configurazione "
+"«/etc/iptables/rules.v6». Queste regole verranno poi caricate automaticamente "
+"all'avvio del sistema."
+
+#. Type: boolean
+#. Description
+#: ../iptables-persistent.templates:3001
+msgid ""
+"Rules are only saved automatically during package installation. See the "
+"manual page of ip6tables-save(8) for instructions on keeping the rules file "
+"up-to-date."
+msgstr ""
+"Le regole vengono salvate automaticamente solo durante l'installazione del "
+"pacchetto. Per informazioni su come mantenere aggiornato il file delle regole "
+"vedere le pagine del manuale di ip6tables-save(8)."
+
