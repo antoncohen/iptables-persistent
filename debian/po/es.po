@@ -1,0 +1,98 @@
+# iptables-persistent po-debconf translation to Spanish
+# Copyright (C) 2011 Software in the Public Interest
+# This file is distributed under the same license as the iptables-persistent package.
+#
+# Changes:
+#   - Initial translation
+#       Ricardo Fraile <rikr@esdebian.org>, 2011
+#
+# Traductores, si no conocen el formato PO, merece la pena leer la
+# documentación de gettext, especialmente las secciones dedicadas a este
+# formato, por ejemplo ejecutando:
+#       info -n '(gettext)PO Files'
+#       info -n '(gettext)Header Entry'
+#
+# Equipo de traducción al español, por favor lean antes de traducir
+# los siguientes documentos:
+#
+#   - El proyecto de traducción de Debian al español
+#     http://www.debian.org/intl/spanish/
+#     especialmente las notas y normas de traducción en
+#     http://www.debian.org/intl/spanish/notas
+#
+#   - La guía de traducción de po's de debconf:
+#     /usr/share/doc/po-debconf/README-trans
+#     o http://www.debian.org/intl/l10n/po-debconf/README-trans
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: iptables-persistent 0.5\n"
+"Report-Msgid-Bugs-To: iptables-persistent@packages.debian.org\n"
+"POT-Creation-Date: 2010-12-30 21:33+0000\n"
+"PO-Revision-Date: 2011-01-24 10:52+0200\n"
+"Last-Translator: Ricardo Fraile <rikr@esdebian.org>\n"
+"Language-Team: Spanish <debian-l10n-spanish@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit"
+
+#. Type: boolean
+#. Description
+#: ../iptables-persistent.templates:1001
+msgid "Save current IPv4 rules?"
+msgstr "¿Desea guardar las reglas IPv4 actuales?"
+
+#. Type: boolean
+#. Description
+#: ../iptables-persistent.templates:1001
+msgid ""
+"The installer can save your current iptables rules to the configuration "
+"file /etc/iptables/rules.v4. These rules will then be loaded next time the "
+"machine is started."
+msgstr ""
+"El instalador puede guardar las reglas actuales de iptables en el archivo"
+"de configuración «/etc/iptables/rules.v4». Las reglas se cargarán la próxima"
+"vez que inicie el equipo." 
+
+#. Type: boolean
+#. Description
+#: ../iptables-persistent.templates:1001
+msgid ""
+"Rules are only saved automatically during installation or upgrade. See the "
+"manual page of iptables-save(8) for instructions on keeping the rules file "
+"up-to-date."
+msgstr ""
+"Sólo se guardan las reglas automáticamente durante la instalación o en una actualización."
+"Consulte las instrucciones en la página del manual de «iptables-save(8)»  para mantener"
+"el archivo de reglas actualizado."
+
+#. Type: boolean
+#. Description
+#: ../iptables-persistent.templates:2001
+msgid "Save current IPv6 rules?"
+msgstr "¿Desea guardar las reglas IPv6 actuales?"
+
+#. Type: boolean
+#. Description
+#: ../iptables-persistent.templates:2001
+msgid ""
+"The installer can save your current iptables rules to the configuration "
+"file /etc/iptables/rules.v6. These rules will then be loaded next time the "
+"machine is started."
+msgstr ""
+"El instalador puede guardar las reglas actuales de iptables en el archivo"
+"de configuración «/etc/iptables/rules.v6». Las reglas se cargarán la próxima"
+"vez que inicie el equipo."
+
+#. Type: boolean
+#. Description
+#: ../iptables-persistent.templates:2001
+msgid ""
+"Rules are only saved automatically during installation or upgrade. See the "
+"manual page of ip6tables-save(8) for instructions on keeping the rules file "
+"up-to-date."
+msgstr ""
+"Sólo se guardan las reglas automáticamente durante la instalación o en una actualización."
+"Consulte las instrucciones en la página del manual de «ip6tables-save(8)»  para mantener"
+"el archivo de reglas actualizado."
+
