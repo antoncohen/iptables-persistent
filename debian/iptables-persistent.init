@@ -60,7 +60,7 @@ save_rules()
         #save IPv6 rules
         if [ -x /sbin/ip6tables-save ]; then
                 log_action_cont_msg " IPv6"
-                iptables-save > /etc/iptables/rules.v6
+                ip6tables-save > /etc/iptables/rules.v6
                 if [ $? -ne 0 ]; then
                         rc=1
                 fi
