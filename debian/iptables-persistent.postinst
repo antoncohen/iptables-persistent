@@ -12,18 +12,18 @@ fi
 
 case "$1" in
 configure)
-    db_get iptables-persistent/autosave_done
+    db_get iptables-persistent/autosave_done || true
     if [ "x$RET" != "xtrue" ]; then
-        db_get iptables-persistent/autosave_v4
+        db_get iptables-persistent/autosave_v4 || true
         if [ "x$RET" = "xtrue" ]; then
             iptables-save > /etc/iptables/rules.v4
         fi
-        db_get iptables-persistent/autosave_v6
+        db_get iptables-persistent/autosave_v6 || true
         if [ "x$RET" = "xtrue" ]; then
             ip6tables-save > /etc/iptables/rules.v6
         fi
 
-        db_set iptables-persistent/autosave_done true
+        db_set iptables-persistent/autosave_done true || true
     fi
 ;;
 esac
