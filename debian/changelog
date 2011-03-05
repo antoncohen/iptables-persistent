@@ -1,3 +1,36 @@
+iptables-persistent (0.5.1) unstable; urgency=low
+
+  * [f62ef8] Depend on lsb-base (Closes: #608531)
+  * [82ba5d] Improve package description
+  * [90bce5] Only autosave rules on first package installation, not on
+    upgrades
+  * [f60a5e] Debconf templates and debian/control reviewed by the
+    debian-l10n-english team as part of the Smith review project.
+    (Closes: #610169)
+  * [f542f6] Debconf translation to Danish (Closes: #610264)
+    - thanks to Joe Dalton
+  * [f7b486] Debconf translation to Portugese (Closes: #610277)
+    - thanks to Américo Monteiro
+  * [f73645] Debconf translation to Czech (Closes: #610325)
+    - thanks to Michal Simunek
+  * [3ac07a] Debconf translation to Italian- thanks to Vincenzo
+    Campanella
+  * [1677c1] Debconf translation to Russian (Closes: #610643)
+    - thanks to Yuri Kozlov
+  * [c4a068] Debconf translation to French (Closes: #610677)
+    - thanks to Steve Petruzzello
+  * [70cfba] Debconf translation to German (Closes: #610646)
+    - thanks to Chris Leick
+  * [d0a8f6] Debconf translation to Swedish (Closes: #611150)
+    - thanks to Martin Bagge
+  * [cbdac5] Debconf translation to Brazillian Portugese
+    (Closes: #611437)- thanks to Adriano Rafael Gomes
+  * [1d3bf1] Debconf translation to Spanish (Closes: #611714)
+    - thanks to Ricardo Fraile
+  * [0eb3ca] Correctly save IPv6 rules during startup (Closes: #613368)
+
+ -- Jonathan Wiltshire <jmw@debian.org>  Fri, 04 Mar 2011 10:18:07 +0000
+
 iptables-persistent (0.5) unstable; urgency=low
 
   * [e1e1a6] debian/rules: fix regression installing init script for
