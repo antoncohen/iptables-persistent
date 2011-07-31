@@ -24,7 +24,9 @@ load_rules()
 	log_action_begin_msg "Loading iptables rules"
 
 	#load IPv4 rules
-	if [ -f /etc/iptables/rules.v4 ]; then
+	if [ ! -f /proc/net/ip_tables_names ]; then
+		log_action_cont_msg " skipping IPv4 (no module loaded)"
+	elif [ -f /etc/iptables/rules.v4 ]; then
 		log_action_cont_msg " IPv4"
 		iptables-restore < /etc/iptables/rules.v4 2> /dev/null
 		if [ $? -ne 0 ]; then
@@ -33,7 +35,9 @@ load_rules()
 	fi
 
 	#load IPv6 rules	
-	if [ -f /etc/iptables/rules.v6 ]; then
+	if [ ! -f /proc/net/ip6_tables_names ]; then
+		log_action_cont_msg " skipping IPv6 (no module loaded)"
+	elif [ -f /etc/iptables/rules.v6 ]; then
 		log_action_cont_msg " IPv6"
 		ip6tables-restore < /etc/iptables/rules.v6 2> /dev/null
 		if [ $? -ne 0 ]; then
@@ -49,7 +53,9 @@ save_rules()
 	log_action_begin_msg "Saving rules"
 
 	#save IPv4 rules
-	if [ -x /sbin/iptables-save ]; then
+	if [ ! -f /proc/net/ip_tables_names ]; then
+		log_action_cont_msg " skipping IPv4 (no module loaded)"
+	elif [ -x /sbin/iptables-save ]; then
 		log_action_cont_msg " IPv4"
 		iptables-save > /etc/iptables/rules.v4
                 if [ $? -ne 0 ]; then
@@ -58,7 +64,9 @@ save_rules()
 	fi
 
         #save IPv6 rules
-        if [ -x /sbin/ip6tables-save ]; then
+	if [ ! -f /proc/net/ip6_tables_names ]; then
+		log_action_cont_msg " skipping IPv6 (no module loaded)"
+        elif [ -x /sbin/ip6tables-save ]; then
                 log_action_cont_msg " IPv6"
                 ip6tables-save > /etc/iptables/rules.v6
                 if [ $? -ne 0 ]; then
