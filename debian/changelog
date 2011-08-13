@@ -1,3 +1,17 @@
+iptables-persistent (0.5.2) unstable; urgency=low
+
+  * [1019a3] Debconf translation to Japanese.
+    Thanks to Hideki Yamane (Closes: #626385)
+  * [a29b06] debian/po: refresh .po files
+  * [3780d5] Do not attempt to save or load rules if the appropriate module
+    is not loaded (Closes: #619626)
+  * [1c14c5] Do not include blank rules.* files; instead, simply remove them
+    on purge if they have been created (Closes: #612278)
+  * [ec6628] Implement 'flush' command to init script (Closes: #634368)
+  * [428b95] Standards version 3.9.2 (no changes)
+
+ -- Jonathan Wiltshire <jmw@debian.org>  Sat, 13 Aug 2011 22:23:46 +0100
+
 iptables-persistent (0.5.1) unstable; urgency=low
 
   * [f62ef8] Depend on lsb-base (Closes: #608531)
