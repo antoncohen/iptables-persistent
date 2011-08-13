@@ -3,7 +3,7 @@ Section: admin
 Priority: optional
 Maintainer: Jonathan Wiltshire <jmw@debian.org>
 Build-Depends: debhelper (>= 7.0.50~), po-debconf
-Standards-Version: 3.9.1
+Standards-Version: 3.9.2
 Vcs-Browser: http://robin.powdarrmonkey.net/cgi-bin/gitweb.cgi?p=iptables-persistent
 Vcs-Git: git://robin.powdarrmonkey.net/git/iptables-persistent/
 
