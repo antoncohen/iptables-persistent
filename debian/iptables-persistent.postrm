@@ -7,4 +7,12 @@ if dpkg-maintscript-helper supports mv_conffile 2>/dev/null; then
          /etc/iptables/rules /etc/iptables/rules.v4 0.0.20101230 -- "$@"
 fi
 
+case "$1" in
+purge)
+	rm -rf /etc/iptables/rules \
+		/etc/iptables/rules.v4 \
+		/etc/iptables/rules.v6
+;;
+esac
+
 #DEBHELPER#
