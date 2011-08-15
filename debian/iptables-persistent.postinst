@@ -16,11 +16,19 @@ configure)
     if [ "x$RET" != "xtrue" ]; then
         db_get iptables-persistent/autosave_v4 || true
         if [ "x$RET" = "xtrue" ]; then
-            iptables-save > /etc/iptables/rules.v4
+	    if [ ! -f /proc/net/ip_tables_names ]; then
+	        iptables-save > /etc/iptables/rules.v4
+            else
+                echo "IPv4: Unable to save (module not loaded)"
+            fi
         fi
         db_get iptables-persistent/autosave_v6 || true
         if [ "x$RET" = "xtrue" ]; then
-            ip6tables-save > /etc/iptables/rules.v6
+	    if [ ! -f /proc/net/ip_tables_names ]; then
+                ip6tables-save > /etc/iptables/rules.v6
+            else
+                echo "IPv6: Unable to save (module not loaded)"
+            fi
         fi
 
         db_set iptables-persistent/autosave_done true || true
