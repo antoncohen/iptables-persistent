@@ -56,27 +56,27 @@ save_rules()
 	#need at least iptable_filter loaded:
 	/sbin/modprobe -q iptable_filter
 	if [ ! -f /proc/net/ip_tables_names ]; then
-		log_action_cont_msg " skipping IPv4 (no module loaded)"
+		log_action_cont_msg " skipping IPv4 (no modules loaded)"
 	elif [ -x /sbin/iptables-save ]; then
 		log_action_cont_msg " IPv4"
 		iptables-save > /etc/iptables/rules.v4
-                if [ $? -ne 0 ]; then
-                        rc=1
-                fi
+		if [ $? -ne 0 ]; then
+			rc=1
+		fi
 	fi
 
-        #save IPv6 rules
+	#save IPv6 rules
 	#need at least ip6table_filter loaded:
 	/sbin/modprobe -q ip6table_filter
 	if [ ! -f /proc/net/ip6_tables_names ]; then
-		log_action_cont_msg " skipping IPv6 (no module loaded)"
-        elif [ -x /sbin/ip6tables-save ]; then
-                log_action_cont_msg " IPv6"
-                ip6tables-save > /etc/iptables/rules.v6
-                if [ $? -ne 0 ]; then
-                        rc=1
-                fi
-        fi
+		log_action_cont_msg " skipping IPv6 (no modules loaded)"
+	elif [ -x /sbin/ip6tables-save ]; then
+		log_action_cont_msg " IPv6"
+		ip6tables-save > /etc/iptables/rules.v6
+		if [ $? -ne 0 ]; then
+			rc=1
+		fi
+	fi
 
 	log_action_end_msg $rc
 }
