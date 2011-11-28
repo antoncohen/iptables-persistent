@@ -26,7 +26,7 @@ load_rules()
 	#load IPv4 rules
 	if [ ! -f /etc/iptables/rules.v4 ]; then
 		log_action_cont_msg " skipping IPv4 (no rules to load)"
-	elif
+	else
 		log_action_cont_msg " IPv4"
 		iptables-restore < /etc/iptables/rules.v4 2> /dev/null
 		if [ $? -ne 0 ]; then
@@ -37,7 +37,7 @@ load_rules()
 	#load IPv6 rules	
 	if [ ! -f /etc/iptables/rules.v6 ]; then
 		log_action_cont_msg " skipping IPv6 (no rules to load)"
-	elif
+	else
 		log_action_cont_msg " IPv6"
 		ip6tables-restore < /etc/iptables/rules.v6 2> /dev/null
 		if [ $? -ne 0 ]; then
