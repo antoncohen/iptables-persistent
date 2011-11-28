@@ -16,6 +16,7 @@ configure)
     if [ "x$RET" != "xtrue" ]; then
         db_get iptables-persistent/autosave_v4 || true
         if [ "x$RET" = "xtrue" ]; then
+		/sbin/modprobe -q iptable_filter
 	    if [ ! -f /proc/net/ip_tables_names ]; then
 	        iptables-save > /etc/iptables/rules.v4
             else
@@ -24,6 +25,7 @@ configure)
         fi
         db_get iptables-persistent/autosave_v6 || true
         if [ "x$RET" = "xtrue" ]; then
+		/sbin/modprobe -q ip6table_filter
 	    if [ ! -f /proc/net/ip_tables_names ]; then
                 ip6tables-save > /etc/iptables/rules.v6
             else
