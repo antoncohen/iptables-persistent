@@ -1,3 +1,18 @@
+iptables-persistent (0.5.3) unstable; urgency=low
+
+  * [09d9ae] Check for loaded modules in postinst (Closes: #637852)
+  * [521544] Fix Default-Start and Default-Stop fields of the LSB header in
+    the init script. Thanks to Andreas Rütten (Closes: #650001)
+  * [d17b2f] Revert checking for loaded modules at startup, as this isn't
+    necessary in newer versions ip{,6}tables-restore - instead check that there
+    is a rules file to be loaded. Ensure at least ip{,6}table_filter is loaded
+    during save (Closes: #637796)
+  * [71aa52] Tidy formatting and spacing in iptables-persistent.init
+  * [3fe51a] Debconf translations to Spanish.
+    Thanks to Francisco Javier Cuadrado (Closes: #645523)
+
+ -- Jonathan Wiltshire <jmw@debian.org>  Mon, 28 Nov 2011 23:19:39 +0000
+
 iptables-persistent (0.5.2) unstable; urgency=low
 
   * [1019a3] Debconf translation to Japanese.
