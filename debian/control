@@ -2,6 +2,7 @@ Source: iptables-persistent
 Section: admin
 Priority: optional
 Maintainer: Jonathan Wiltshire <jmw@debian.org>
+Uploaders: Andreas Rütten <AndreasRuetten@gmx.de>
 Build-Depends: debhelper (>= 7.0.50~), po-debconf
 Standards-Version: 3.9.2
 Vcs-Browser: http://robin.powdarrmonkey.net/cgi-bin/gitweb.cgi?p=iptables-persistent
