@@ -1,0 +1,77 @@
+# Dutch translation of iptables-persistent debconf templates.
+# Copyright (C) 2012 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the iptables-persistent package.
+# Jeroen Schot <schot@a-eskwadraat.nl>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: iptables-persistent 0.5.3\n"
+"Report-Msgid-Bugs-To: iptables-persistent@packages.debian.org\n"
+"POT-Creation-Date: 2011-01-15 20:39+0000\n"
+"PO-Revision-Date: 2012-02-10 15:52+0100\n"
+"Last-Translator: Jeroen Schot <schot@a-eskwadraat.nl>\n"
+"Language-Team: Debian l10n Dutch <debian-l10n-dutch@lists.debian.org>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: boolean
+#. Description
+#: ../iptables-persistent.templates:2001
+msgid "Save current IPv4 rules?"
+msgstr "Huidige IPv4-regels opslaan?"
+
+#. Type: boolean
+#. Description
+#: ../iptables-persistent.templates:2001
+msgid ""
+"Current iptables rules can be saved to the configuration file /etc/iptables/"
+"rules.v4. These rules will then be loaded automatically during system "
+"startup."
+msgstr ""
+"De huidige iptables-regels kunnen opgeslagen worden in het "
+"configuratiebestand /etc/iptables/rules.v4. Deze regels worden dan "
+"automatisch geladen tijdens de systeemstart."
+
+#. Type: boolean
+#. Description
+#: ../iptables-persistent.templates:2001
+msgid ""
+"Rules are only saved automatically during package installation. See the "
+"manual page of iptables-save(8) for instructions on keeping the rules file "
+"up-to-date."
+msgstr ""
+"De regels worden alleen automatisch opgeslagen tijdens de pakketinstallatie. "
+"Zie de man-pagina van iptables-save(8) voor instructies over het bijgewerkt "
+"houden van het regelsbestand."
+
+#. Type: boolean
+#. Description
+#: ../iptables-persistent.templates:3001
+msgid "Save current IPv6 rules?"
+msgstr "Huidige IPv6-regels opslaan?"
+
+#. Type: boolean
+#. Description
+#: ../iptables-persistent.templates:3001
+msgid ""
+"Current iptables rules can be saved to the configuration file /etc/iptables/"
+"rules.v6. These rules will then be loaded automatically during system "
+"startup."
+msgstr ""
+"De huidige iptables-regels kunnen opgeslagen worden in het "
+"configuratiebestand /etc/iptables/rules.v6. Deze regels worden dan "
+"automatisch geladen tijdens de systeemstart."
+
+#. Type: boolean
+#. Description
+#: ../iptables-persistent.templates:3001
+msgid ""
+"Rules are only saved automatically during package installation. See the "
+"manual page of ip6tables-save(8) for instructions on keeping the rules file "
+"up-to-date."
+msgstr ""
+"De regels worden alleen automatisch opgeslagen tijdens de pakketinstallatie. "
+"Zie de man-pagina van ip6tables-save(8) voor instructies over het bijgewerkt "
+"houden van het regelsbestand."
