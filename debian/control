@@ -10,6 +10,7 @@ Vcs-Git: git://robin.powdarrmonkey.net/git/iptables-persistent/
 
 Package: iptables-persistent
 Architecture: all
+Pre-Depends: dpkg (>= 1.15.7.2~)
 Depends: iptables, lsb-base, kmod, ${misc:Depends}
 Description: boot-time loader for iptables rules
  This package provides a system startup script that restores iptables
